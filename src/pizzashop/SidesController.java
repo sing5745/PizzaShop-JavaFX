@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pizzashop;
 
 import Pizza_Class.PizzaFiles;
@@ -17,12 +12,10 @@ import Pizza_Class.Sides;
 import javafx.scene.control.Label;
 
 /**
- * FXML Controller class
+ * 
  *
  * @author inder
  */
-
-
 
 public class SidesController implements Initializable {
 
@@ -48,9 +41,7 @@ public class SidesController implements Initializable {
     @FXML private Button addCheeseGarlicB; String cgb = ""; double cgbP = 0;
     @FXML private Button addWedges; String wedges = ""; double wdgesP = 0;
     
-    /**
-     * Initializes the controller class.
-     */
+   
     @Override
     public void initialize(URL url, ResourceBundle rb) {
        
