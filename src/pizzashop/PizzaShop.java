@@ -78,10 +78,6 @@ public class PizzaShop extends Application {
         dipStage.hide();
         makeOwnStage.hide();
         specialStage.hide();
-//        double d = SpecialsController.fpSpecials  + MakeOwn.fpMakeOwn + CombosController.fpCombos
-//                           + DipsController.fpDips + SidesController.fpSides;
-//        mainController.orderPrice.setText(String.format("%.2f",d));
-        
     }
     
     public static void showCombos(){
