@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pizzashop;
 
 
@@ -40,9 +35,6 @@ public class PizzaShop extends Application {
         FXMLLoader mo = new FXMLLoader(getClass().getResource("makeown.fxml")); 
         FXMLLoader sp = new FXMLLoader(getClass().getResource("specials.fxml"));
         FXMLLoader rt = new FXMLLoader(getClass().getResource("Reciept.fxml"));
-        
-        
-        //makeown m = (makeown)mo.getController();
          
          
         
@@ -74,9 +66,7 @@ public class PizzaShop extends Application {
     
     }
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         launch(args);
     }
