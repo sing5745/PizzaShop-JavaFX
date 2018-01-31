@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pizzashop;
 
 import java.net.URL;
@@ -30,7 +25,7 @@ import java.util.regex.Pattern;
 
 
 /**
- * FXML Controller class
+ * 
  *
  * @author inder
  */
@@ -146,9 +141,7 @@ public class SpecialsController implements Initializable {
     
     Calendar rightNow = Calendar.getInstance();
     
-    /**
-     * Initializes the controller class.
-     */
+   
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         totalOrderPrice.setVisible(false);
@@ -298,15 +291,7 @@ public class SpecialsController implements Initializable {
         changeD();
     }
     
-    
-    
-    
-    String s = rightNow.get(Calendar.DAY_OF_WEEK) + "";
-    
-    
-    
-    //String p = s.toString();
-    
+
     public void changeD(){
          
         friI.setVisible(false);
@@ -789,8 +774,6 @@ public class SpecialsController implements Initializable {
         addHawa.setVisible(true);
         addHawa.setText("ADD AGAIN");
         showPrice();
-        //PizzaFiles.appendToFile(hawaPizza);
-        //write();
         sizeHawa=0;
         hawaPrice=0;
         topHawa="";
@@ -809,8 +792,6 @@ public class SpecialsController implements Initializable {
         addmeat.setVisible(true);
         addmeat.setText("ADD AGAIN");
         showPrice();
-        //PizzaFiles.appendToFile(meatPizza);
-        //write();
         sizeMeat=0;
         meatPrice=0;
         topMeat="";
@@ -830,9 +811,6 @@ public class SpecialsController implements Initializable {
         addVegi.setVisible(true);
         addVegi.setText("ADD AGAIN");
         showPrice();
-        //PizzaFiles.appendToFile(vegiPizza);
-       // write();
-        //PizzaFiles.appendToFile(vegiPizza);
         sizeVegi=0;
         vegiPrice=0;
         topVegi="";
@@ -851,8 +829,6 @@ public class SpecialsController implements Initializable {
         addNapo.setVisible(true);
         addNapo.setText("ADD AGAIN");
         showPrice();
-        //PizzaFiles.appendToFile(napoPizza);
-        //write();
         sizeNap=0;
         napoPrice=0;
         topNap="";
@@ -908,7 +884,6 @@ public class SpecialsController implements Initializable {
         totalOrderPrice.setText(String.format("%.2f",orderP));
         totalOrderPrice.setVisible(true);
         checkout.setVisible(true);
-        //price.setText("$0.00");
     }
     
     public void change()
@@ -933,7 +908,7 @@ public class SpecialsController implements Initializable {
         {
           monP.setVisible(false);
           addHawa.setText("SPECIAL ADDED");
-          
+          showPrice();
         }
         
         if (rightNow.get(Calendar.DAY_OF_WEEK) == 3)
@@ -943,7 +918,7 @@ public class SpecialsController implements Initializable {
             Pizza hawaPizza = new Pizza(14,9.99,"Today's Special,Mushroom,Green Pepper,Onions");
             specialsList.add(hawaPizza);
           
-          showPrice();  
+            showPrice();  
         }
         
         if (rightNow.get(Calendar.DAY_OF_WEEK) == 4)
