@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pizzashop;
 
 import Pizza_Class.PizzaFiles;
@@ -28,7 +23,7 @@ import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class
+ * 
  *
  * @author inder
  */
@@ -44,9 +39,7 @@ public class RecieptController implements Initializable {
        @FXML
        private Label price;
     
-    /**
-     * Initializes the controller class.
-     */
+   
     @Override
     public void initialize(URL url, ResourceBundle rb) {
          
@@ -54,15 +47,6 @@ public class RecieptController implements Initializable {
           price.setVisible(false);
     }    
     
-    
-    public void ordersFromMakeOwn(){
-        
-        
-    
-        //double Price = MakeOwn.totalPrice ;
-     
-        //System.out.println(Price);
-    }
     
     public void readFromFile() {
         receipt.setVisible(true);
@@ -77,15 +61,12 @@ public class RecieptController implements Initializable {
         }
          
         
-       //lengthList = pizzaList.size();
-        
-        //Open the file for reading
+       
         FileReader fr = new FileReader(myFile.getAbsoluteFile());
         BufferedReader br = new BufferedReader(fr);
-        //Read from the file
-        //String s = br.readLine();  //Null if EOF
+        
         String s;
-         //o s c p
+         /
         
          String text = "";
         
