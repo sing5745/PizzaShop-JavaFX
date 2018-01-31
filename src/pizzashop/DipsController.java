@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pizzashop;
 
 import Pizza_Class.PizzaFiles;
@@ -19,7 +14,7 @@ import java.util.ArrayList;
 
 
 /**
- * FXML Controller class
+ * 
  *
  * @author inder
  */
@@ -66,13 +61,10 @@ public class DipsController implements Initializable {
     double fantaP = 0; double gingerP = 0;
     
     double sidesTotal = 0;
-    
-    /**
-     * Initializes the controller class.
-     */
+   
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
     }    
     
     
@@ -196,7 +188,6 @@ public class DipsController implements Initializable {
         garlicP = counter * 0.75;
         showPrice();
         dipsList.add(counter + " Garlic Parmesan,");
-        //System.out.println(dipsList.get(0));
         garlic.setText("ADDED");
     }
     
@@ -259,8 +250,6 @@ public class DipsController implements Initializable {
         String sT = String.format( "%.2f", sidesTotal );
         showPrice.setText(sT); 
         fpDips = sidesTotal;  /** Final Price dips **/
-       // SpecialsController.printPizza();
-       // MakeOwn.getPizzas();
     }
     
     @FXML
