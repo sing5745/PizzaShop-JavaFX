@@ -1,18 +1,5 @@
 package pizzashop;
 
-
-
-
-
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-//import PizzaReadingWriting.PizzaFile;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -221,16 +208,7 @@ public class MakeOwn implements Initializable {
     String slTop = ""; String anTop = ""; String isTop = ""; String mTop = ""; 
     String gTop = ""; String oTop = ""; String tTop = ""; String boTop = "";
     String goTop = ""; String piTop = ""; String jTop = "";
-    
-    
-    
-   //bTop = cTop = baTop = peTop = hTop = slTop = isTop = anTop = mTop = gTop = oTop = tTop = bTop = gTop = piTop = jTop= ",";
-    
-    
-    
-
-   
-    
+  
     @FXML
     private Label showFinalPrice;
 
@@ -247,8 +225,6 @@ public class MakeOwn implements Initializable {
     @FXML private RadioButton thickCrust; @FXML private RadioButton regularCrust;
     
     
-   
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
@@ -258,10 +234,7 @@ public class MakeOwn implements Initializable {
        showSize.setVisible(false);
        showFinalPrice.setVisible(false);
        totalPizzaPrice.setVisible(false);
-        
-        
-//        ToggleGroup choosePizzaSize = new ToggleGroup();
-//        size10.setToggleGroup(choosePizzaSize);
+
 
     }
 
@@ -497,7 +470,6 @@ public class MakeOwn implements Initializable {
             rightPep.setVisible(false);
             fullPep.setVisible(true);
             leftPep.setVisible(false);
-            //price += 1.50;
             peP = 1.50;
             peTop = "Pepperoni,";
             showPrice();
@@ -1130,7 +1102,6 @@ public class MakeOwn implements Initializable {
     
     @FXML
     public void resetTopDisplay(){
-        //base.setVisible(false);
         fullPep.setVisible(false);
         leftPep.setVisible(false);
         rightPep.setVisible(false);
@@ -1217,54 +1188,22 @@ public class MakeOwn implements Initializable {
     @FXML
     public  void addPizzaToList() {
         reset();
-
-        //System.out.println(totalPrice);
-//        int finalSize = size;
-        
         bTop += ",";
         toppings = bTop + cTop + baTop + peTop + hTop + slTop + isTop + anTop + mTop + gTop + oTop + tTop + boTop + goTop + piTop + jTop;
-        
-        
-        
         String[] sl = toppings.split(",");
-        
-        
-        
         Pizza pizza = new Pizza(size,crust,totalPrice,toppings);
-        pizzaList.add(pizza);
-        
-       System.out.println(pizza);
-        
+        pizzaList.add(pizza);        
         showPrice();
         toppings = bTop = cTop = baTop = peTop = hTop = slTop = isTop = anTop = mTop = gTop = oTop = tTop = bTop = gTop = piTop = jTop= "";
-        price = beP = ckP = baP = peP = haP = isP = slP = anP = mP = gP = oP = tP = boP = goP = piP = jP = crustPrice = 0;
-        
+        price = beP = ckP = baP = peP = haP = isP = slP = anP = mP = gP = oP = tP = boP = goP = piP = jP = crustPrice = 0;        
         showFinalPrice.setText("$0.00");
         base.setVisible(false);
         resetTopDisplay();
         resetTopButtons();
         showSize.setVisible(false);
         showFinalPrice.setVisible(false);
-//       totalPizzaPrice.setVisible(false);
     }
-    
-    
-    public static void writePizza(){
-    
-        
-        
-    }
-    
-    public void readPizzas() {
-       //pizzas = PizzaFile.readFromFile();
-//           for (Pizza s: pizzas){
-//                System.out.println(s);
-//            }
-           
-           
-    }
-    
-   /** Not for receipt printing **/
+
     public void printReciept(){
        PizzaFiles.writeToFileCreateOwn(pizzaList);
        PizzaFiles.printR(null, null, pizzaList,null,null);
@@ -1277,14 +1216,7 @@ public class MakeOwn implements Initializable {
        
       
     }
-    
-    public void writePizzas(){
-//     for (int i = 0; i < pizzas.size(); i++){
-//                PizzaFile.appendToFile(pizzas.get(i));
-//           }
-  //  PizzaFile.appendToFile(pizzas.get(pizzas.size()-1));
-    }
-    
+  
     @FXML
     public void showMain() {
         PizzaShop.showMain();
