@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="506.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pizzashop.RecieptController">
+   <children>
+      <TextArea fx:id="receipt" layoutX="160.0" layoutY="147.0" prefHeight="228.0" prefWidth="270.0" />
+      <Button fx:id="printReciept" alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="427.0" mnemonicParsing="false" onAction="#readFromFile" prefHeight="38.0" prefWidth="171.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="PRINT RECIEPT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="139.0" fitWidth="161.0" layoutX="224.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/LogoSample_ByTailorBrands.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="price" alignment="CENTER" layoutX="422.0" layoutY="46.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="\$0.00">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>

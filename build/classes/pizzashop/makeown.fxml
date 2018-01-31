@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="1001.0" prefWidth="1496.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pizzashop.MakeOwn">
+   <children>
+      <ImageView fitHeight="857.0" fitWidth="1532.0" layoutY="144.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/pizzaBackground.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="LOGO" fitHeight="143.0" fitWidth="142.0" layoutX="-3.0" layoutY="2.0" onMouseClicked="#showMain" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/LogoSample_ByTailorBrands.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <StackPane layoutX="282.0" layoutY="17.0" prefHeight="128.0" prefWidth="975.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="58.0" prefWidth="621.0" style="-fx-text-fill: #cc0000; -fx-font-weight: bold; -fx-font-size: 45pt; -fx-font-style: italic; -fx-font-family: &quot;Agency FB&quot;;" text="Make Your Own" />
+         </children>
+      </StackPane>
+      <AnchorPane layoutX="31.0" layoutY="242.0" prefHeight="200.0" prefWidth="624.0">
+         <children>
+            <Button fx:id="size10" layoutX="42.0" layoutY="32.0" mnemonicParsing="false" onAction="#choose10Size" prefHeight="58.0" prefWidth="64.0" style="-fx-background-radius: 80px;" text="10&quot;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="size12" layoutX="164.0" layoutY="21.0" mnemonicParsing="false" onAction="#choose12Size" prefHeight="80.0" prefWidth="82.0" style="-fx-background-radius: 80px;" text="12&quot;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="size14" layoutX="300.0" layoutY="14.0" mnemonicParsing="false" onAction="#choose14Size" prefHeight="94.0" prefWidth="97.0" style="-fx-background-radius: 55;" text="14&quot;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="size16" layoutX="442.0" layoutY="1.0" mnemonicParsing="false" onAction="#choose16Size" prefHeight="119.0" prefWidth="127.0" style="-fx-background-radius: 80;" text="16&quot;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label fx:id="showFinalPrice1" alignment="CENTER" layoutX="51.0" layoutY="132.0" prefHeight="46.0" prefWidth="47.0" style="-fx-background-radius: 80px; -fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="10.99$" />
+            <Label fx:id="showFinalPrice11" alignment="CENTER" layoutX="182.0" layoutY="132.0" prefHeight="46.0" prefWidth="47.0" style="-fx-background-radius: 80px; -fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="12.99$" />
+            <Label fx:id="showFinalPrice111" alignment="CENTER" layoutX="325.0" layoutY="132.0" prefHeight="46.0" prefWidth="47.0" style="-fx-background-radius: 80px; -fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="14.99$" />
+            <Label fx:id="showFinalPrice1111" alignment="CENTER" layoutX="482.0" layoutY="132.0" prefHeight="46.0" prefWidth="47.0" style="-fx-background-radius: 80px; -fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="16.99$" />
+         </children>
+      </AnchorPane>
+      <SplitPane dividerPositions="0.5064935064935064" layoutX="60.0" layoutY="525.0" prefHeight="363.0" prefWidth="849.0" stylesheets="@../css/toppings.css">
+         <items>
+            <AnchorPane fx:id="meatBox" minHeight="0.0" minWidth="0.0" prefHeight="299.0" prefWidth="398.0" stylesheets="@../css/toppings.css">
+               <children>
+                  <Label alignment="CENTER" layoutX="141.0" layoutY="27.0" prefHeight="33.0" prefWidth="64.0" style="-fx-background-color: black; -fx-text-fill: #cc0000;" text="Meats" />
+                  <Label alignment="CENTER" layoutX="197.0" layoutY="27.0" prefHeight="32.0" prefWidth="53.0" style="-fx-text-fill: white; -fx-background-color: black;" text="($1.50)" />
+                  <ToolBar layoutX="20.0" layoutY="274.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="112.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="Pepperoni">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nPep" mnemonicParsing="false" onAction="#showPep" text="No " />
+                        <RadioButton fx:id="lPep" mnemonicParsing="false" onAction="#showPep" text="Left " />
+                        <RadioButton fx:id="fPep" mnemonicParsing="false" onAction="#showPep" text="Full" />
+                        <RadioButton fx:id="rPep" mnemonicParsing="false" onAction="#showPep" text="Right" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar layoutX="20.0" layoutY="215.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="Bacon">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nBac" mnemonicParsing="false" onAction="#showBac" text="No" />
+                        <RadioButton fx:id="lBac" mnemonicParsing="false" onAction="#showBac" text="Left " />
+                        <RadioButton fx:id="fBac" mnemonicParsing="false" onAction="#showBac" text="Full" />
+                        <RadioButton fx:id="rBac" mnemonicParsing="false" onAction="#showBac" text="Right" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar layoutX="20.0" layoutY="153.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="111.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="Chicken">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nChk" mnemonicParsing="false" onAction="#showChk" text="No" />
+                        <RadioButton fx:id="lChk" mnemonicParsing="false" onAction="#showChk" text="Left " />
+                        <RadioButton fx:id="fChk" mnemonicParsing="false" onAction="#showChk" text="Full" />
+                        <RadioButton fx:id="rChk" mnemonicParsing="false" onAction="#showChk" text="Right" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar layoutX="20.0" layoutY="93.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="91.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="Beef">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nBf" mnemonicParsing="false" onAction="#showBeef" text="No" />
+                        <RadioButton fx:id="lBf" mnemonicParsing="false" onAction="#showBeef" text="Left " />
+                        <RadioButton fx:id="fBf" mnemonicParsing="false" onAction="#showBeef" text="Full" />
+                        <RadioButton fx:id="rBf" mnemonicParsing="false" onAction="#showBeef" text="Right" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar layoutX="206.0" layoutY="215.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="ITLN Sausage">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nIS" mnemonicParsing="false" onAction="#showIS" text="No" />
+                        <RadioButton fx:id="lIS" mnemonicParsing="false" onAction="#showIS" text="Left " />
+                        <RadioButton fx:id="fIS" mnemonicParsing="false" onAction="#showIS" text="Full" />
+                        <RadioButton fx:id="rIS" mnemonicParsing="false" onAction="#showIS" text="Right" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar layoutX="206.0" layoutY="153.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="Salami">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nSl" mnemonicParsing="false" onAction="#showSl" text="No" />
+                        <RadioButton fx:id="lSl" mnemonicParsing="false" onAction="#showSl" text="Left " />
+                        <RadioButton fx:id="fSl" mnemonicParsing="false" onAction="#showSl" text="Full" />
+                        <RadioButton fx:id="rSl" mnemonicParsing="false" onAction="#showSl" text="Right" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar layoutX="206.0" layoutY="274.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="Anchovies">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nAn" mnemonicParsing="false" onAction="#showAn" text="No" />
+                        <RadioButton fx:id="lAn" mnemonicParsing="false" onAction="#showAn" text="Left " />
+                        <RadioButton fx:id="fAn" mnemonicParsing="false" onAction="#showAn" text="Full" />
+                        <RadioButton fx:id="rAn" mnemonicParsing="false" onAction="#showAn" text="Right" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar layoutX="206.0" layoutY="93.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="Ham">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nHam" mnemonicParsing="false" onAction="#showHam" text="No" />
+                        <RadioButton fx:id="lHam" mnemonicParsing="false" onAction="#showHam" text="Left " />
+                        <RadioButton fx:id="fHam" mnemonicParsing="false" onAction="#showHam" text="Full" />
+                        <RadioButton fx:id="rHam" mnemonicParsing="false" onAction="#showHam" text="Right" />
+                     </items>
+                  </ToolBar>
+               </children>
+               <styleClass>
+                  <String fx:value="meatBox" />
+                  <String fx:value="CheckBox" />
+               </styleClass>
+            </AnchorPane>
+            <AnchorPane fx:id="veggieBox" minHeight="0.0" minWidth="0.0" prefHeight="361.0" prefWidth="390.0" styleClass="veggieBox" stylesheets="@../css/toppings.css">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="122.0" layoutY="27.0" prefHeight="32.0" prefWidth="76.0" style="-fx-text-fill: #cc0000; -fx-background-color: black;" text="Veggie " />
+                  <Label layoutX="198.0" layoutY="27.0" prefHeight="33.0" prefWidth="53.0" style="-fx-text-fill: white; -fx-background-color: black;" text="($1.00)" />
+                  <ToolBar layoutX="27.0" layoutY="93.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="Mushrooms">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nM" mnemonicParsing="false" onAction="#showMu" text="No" />
+                        <RadioButton fx:id="lM" mnemonicParsing="false" onAction="#showMu" text="Left " />
+                        <RadioButton fx:id="fM" mnemonicParsing="false" onAction="#showMu" text="Full" />
+                        <RadioButton fx:id="rM" mnemonicParsing="false" onAction="#showMu" text="Right" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar layoutX="27.0" layoutY="153.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="Green Pepper">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nGp" mnemonicParsing="false" onAction="#showGp" text="No" />
+                        <RadioButton fx:id="lGp" mnemonicParsing="false" onAction="#showGp" text="Left " />
+                        <RadioButton fx:id="fGp" mnemonicParsing="false" onAction="#showGp" text="Full" />
+                        <RadioButton fx:id="rGp" mnemonicParsing="false" onAction="#showGp" text="Right" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar layoutX="27.0" layoutY="216.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="Onions">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nOn" mnemonicParsing="false" onAction="#showOn" text="No" />
+                        <RadioButton fx:id="lOn" mnemonicParsing="false" onAction="#showOn" text="Left " />
+                        <RadioButton fx:id="fOn" mnemonicParsing="false" onAction="#showOn" text="Full" />
+                        <RadioButton fx:id="rOn" mnemonicParsing="false" onAction="#showOn" text="Right" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar layoutX="27.0" layoutY="279.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="Tomatoes">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nTo" mnemonicParsing="false" onAction="#showTo" text="No" />
+                        <RadioButton fx:id="lTo" mnemonicParsing="false" onAction="#showTo" text="Left " />
+                        <RadioButton fx:id="fTo" mnemonicParsing="false" onAction="#showTo" text="Full" />
+                        <RadioButton fx:id="rTo" mnemonicParsing="false" onAction="#showTo" text="Right" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar layoutX="207.0" layoutY="93.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="Black Olives">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nBo" mnemonicParsing="false" onAction="#showBo" text="No" />
+                        <RadioButton fx:id="lBo" mnemonicParsing="false" onAction="#showBo" text="Left " />
+                        <RadioButton fx:id="fBo" mnemonicParsing="false" onAction="#showBo" text="Full" />
+                        <RadioButton fx:id="rBo" mnemonicParsing="false" onAction="#showBo" text="Right" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar layoutX="207.0" layoutY="153.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="Green Olives">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nGo" mnemonicParsing="false" onAction="#showGo" text="No" />
+                        <RadioButton fx:id="lGo" mnemonicParsing="false" onAction="#showGo" text="Left " />
+                        <RadioButton fx:id="fGo" mnemonicParsing="false" onAction="#showGo" text="Full" />
+                        <RadioButton fx:id="rGo" mnemonicParsing="false" onAction="#showGo" text="Right" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar layoutX="207.0" layoutY="216.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="Pineapple">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nPi" mnemonicParsing="false" onAction="#showPi" text="No" />
+                        <RadioButton fx:id="lPi" mnemonicParsing="false" onAction="#showPi" text="Left " />
+                        <RadioButton fx:id="fPi" mnemonicParsing="false" onAction="#showPi" text="Full" />
+                        <RadioButton fx:id="rPi" mnemonicParsing="false" onAction="#showPi" text="Right" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar layoutX="207.0" layoutY="279.0" prefHeight="55.0" prefWidth="162.0">
+                     <items>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="Jalapeno">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <RadioButton fx:id="nJp" mnemonicParsing="false" onAction="#showJp" text="No" />
+                        <RadioButton fx:id="lJp" mnemonicParsing="false" onAction="#showJp" text="Left " />
+                        <RadioButton fx:id="fJp" mnemonicParsing="false" onAction="#showJp" text="Full" />
+                        <RadioButton fx:id="rJp" mnemonicParsing="false" onAction="#showJp" text="Right" />
+                     </items>
+                  </ToolBar>
+               </children></AnchorPane>
+         </items>
+         <styleClass>
+            <String fx:value="meatBox" />
+            <String fx:value="veggieBox" />
+            <String fx:value="CheckBox" />
+         </styleClass>
+      </SplitPane>
+      <Pane layoutX="655.0" layoutY="179.0" prefHeight="234.0" prefWidth="204.0">
+         <children>
+            <RadioButton fx:id="stuffedCrust" layoutX="33.0" layoutY="67.0" mnemonicParsing="false" onAction="#addStuffedCrust" style="-fx-font-size: 14pt; -fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: black;" text="Stuffed" />
+            <RadioButton fx:id="thinCrust" layoutX="33.0" layoutY="107.0" mnemonicParsing="false" onAction="#addThinCrust" style="-fx-font-size: 14pt; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-color: black;" text="Thin" />
+            <RadioButton fx:id="thickCrust" layoutX="33.0" layoutY="149.0" mnemonicParsing="false" onAction="#addThickCrust" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-font-size: 14pt; -fx-background-color: black;" text="Thick" />
+            <Label alignment="CENTER" layoutX="12.0" layoutY="23.0" prefHeight="33.0" prefWidth="145.0" style="-fx-font-size: 20pt; -fx-font-weight: bold; -fx-text-fill: #cc0000; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;;" text="Choose Crust" />
+            <RadioButton fx:id="regularCrust" layoutX="33.0" layoutY="189.0" mnemonicParsing="false" onAction="#addRegularCrust" style="-fx-font-weight: bold; -fx-font-size: 14pt; -fx-text-fill: white; -fx-background-color: black;" text="Regular" />
+            <Label layoutX="161.0" layoutY="28.0" />
+            <Label alignment="CENTER" layoutX="150.0" layoutY="23.0" prefHeight="33.0" prefWidth="80.0" style="-fx-font-size: 17pt; -fx-font-weight: bold; -fx-font-style: italic; -fx-text-fill: white; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;;" text="(1.00$)" />
+         </children>
+      </Pane>
+      <Button fx:id="addPizza" layoutX="873.0" layoutY="348.0" mnemonicParsing="false" onAction="#addPizzaToList" prefHeight="46.0" prefWidth="185.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD PIZZA" />
+      <Button fx:id="finishOrder" layoutX="1145.0" layoutY="171.0" mnemonicParsing="false" onAction="#printReciept" prefHeight="46.0" prefWidth="185.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: grey; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD TO ORDER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label fx:id="showFinalPrice" alignment="CENTER" layoutX="1397.0" layoutY="331.0" prefHeight="80.0" prefWidth="83.0" style="-fx-background-radius: 80px; -fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="0.00$" />
+      <Label alignment="CENTER" layoutX="68.0" layoutY="179.0" prefHeight="46.0" prefWidth="229.0" style="-fx-font-size: 24pt; -fx-font-weight: bold; -fx-text-fill: #cc0000; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;;" text="Choose Your Size" />
+      <Label alignment="CENTER" layoutX="60.0" layoutY="450.0" prefHeight="46.0" prefWidth="333.0" style="-fx-font-size: 24pt; -fx-font-weight: bold; -fx-text-fill: #cc0000; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;;" text="Choose Your Toppings" />
+      <VBox layoutX="957.0" layoutY="390.0" prefHeight="529.0" prefWidth="561.0">
+         <children>
+            <StackPane fx:id="sp" prefHeight="547.0" prefWidth="561.0">
+               <children>
+                  <ImageView fx:id="base" fitHeight="546.0" fitWidth="571.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/base.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightPep" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/PO-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftPep" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/PO-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullPep" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/PO.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullBac" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/B.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftBac" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/B-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightBac" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/B-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightChk" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/CH-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftChk" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/CH-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullChk" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/CH.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullBf" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/GB.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftBf" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/GB-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightBf" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/GB-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightIS" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/IS-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftIS" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/IS-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullIS" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/IS.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullSl" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/SA.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftSl" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/SA-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightSl" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/SA-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightAn" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/AN-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftAn" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/AN-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullAn" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/AN.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullHam" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/H.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftHam" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/H-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightHam" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/H-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightM" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/FM-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftM" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/FM-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullM" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/FM.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullGp" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/GP.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftGp" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/GP-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightGp" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/GP-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftOn" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/O-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightOn" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/O-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullOn" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/O.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullTo" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/ST.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftTo" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/ST-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightTo" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/ST-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightBo" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/BO-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftBo" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/BO-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullBo" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/BO.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullGo" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/GO.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftGo" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/GO-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightGo" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/GO-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightPi" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/PI-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftPi" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/PI-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullPi" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/PI.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="leftJp" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/JP-left.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rightJp" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/JP-right.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="fullJp" fitHeight="546.0" fitWidth="571.0" layoutX="18.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/images2/JP.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+      <Label fx:id="showSize" alignment="CENTER" layoutX="1095.0" layoutY="351.0" prefHeight="39.0" prefWidth="255.0" style="-fx-font-size: 24pt; -fx-font-weight: bold; -fx-text-fill: #cc0000; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;;" />
+      <Label fx:id="orderPrice" alignment="CENTER" layoutX="1378.0" layoutY="8.0" prefHeight="80.0" prefWidth="83.0" style="-fx-background-radius: 80px; -fx-text-fill: white; -fx-background-color: grey; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="0.00$" />
+      <Label fx:id="totalPizzaPrice" alignment="CENTER" layoutX="1378.0" layoutY="154.0" prefHeight="80.0" prefWidth="83.0" style="-fx-background-radius: 80px; -fx-text-fill: white; -fx-background-color: grey; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="0.00$" />
+      <Button fx:id="checkout" layoutX="1238.0" layoutY="35.0" mnemonicParsing="false" onAction="#checkOut" prefHeight="46.0" prefWidth="130.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: grey; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="CHECKOUT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+     
+   </children>
+</AnchorPane>

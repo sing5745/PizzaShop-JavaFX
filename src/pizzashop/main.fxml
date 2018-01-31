@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="label" prefHeight="995.0" prefWidth="1371.0" style="-fx-background-color: black;" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pizzashop.mainController">
+   <children>
+      <AnchorPane layoutY="1.0" prefHeight="167.0" prefWidth="1371.0" style="-fx-background-color: white;">
+         <children>
+            <Label alignment="CENTER" layoutX="301.0" layoutY="16.0" prefHeight="135.0" prefWidth="859.0" style="-fx-text-fill: #cc0000; -fx-font-weight: bold; -fx-font-size: 45pt; -fx-font-style: italic; -fx-font-family: &quot;Agency FB&quot;; -fx-background-color: black;" text="Welcome To Pizza Hunger" />
+            <ImageView fitHeight="177.0" fitWidth="161.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/LogoSample_ByTailorBrands.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="orderPrice" alignment="CENTER" layoutX="1254.0" layoutY="33.0" prefHeight="80.0" prefWidth="83.0" style="-fx-background-radius: 80px; -fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="0.00$" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="mjs" fitHeight="334.0" fitWidth="531.0" layoutX="82.0" layoutY="266.0" onMouseClicked="#showSpecials" pickOnBounds="true" preserveRatio="true" styleClass="ImageView">
+         <image>
+            <Image url="@../images/specials.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="210.0" layoutY="419.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="SPECIALS">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fx:id="imgOthers" fitHeight="334.0" fitWidth="418.0" layoutX="511.0" layoutY="266.0" onMouseClicked="#showOthers" pickOnBounds="true" preserveRatio="true" styleClass="ImageView">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <image>
+            <Image url="@../images/others.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="639.0" layoutY="419.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="SIDES">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fx:id="imgCombos" fitHeight="334.0" fitWidth="1049.0" layoutX="82.0" layoutY="622.0" onMouseClicked="#showCombos" pickOnBounds="true" preserveRatio="true" styleClass="ImageView">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <image>
+            <Image url="@../images/combos.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="426.0" layoutY="780.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="COMBOS">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fx:id="imgDips" fitHeight="334.0" fitWidth="418.0" layoutX="939.0" layoutY="266.0" onMouseClicked="#showDips" pickOnBounds="true" preserveRatio="true" styleClass="ImageView">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <image>
+            <Image url="@../images/dips.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="1067.0" layoutY="419.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="DIPS &amp; DRINKS">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fx:id="imgMakeOwn" fitHeight="334.0" fitWidth="418.0" layoutX="939.0" layoutY="622.0" onMouseClicked="#showMakeOwn" pickOnBounds="true" preserveRatio="true" styleClass="ImageView">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <image>
+            <Image url="@../images/makeown.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="1068.0" layoutY="780.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="MAKE YOUR OWN">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

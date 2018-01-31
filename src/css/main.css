@@ -1,0 +1,19 @@
+.AnchorPane{
+           -fx-background-image: url("../images/pizzaBackground.jpg");
+}
+
+.label{
+        -fx-font-family: "Agency FB";
+}
+
+.ImageView:hover{     
+  -fx-background-color:white;
+  -fx-border-color: red;
+  -fx-opacity:0.7;
+  -fx-background-image: url("../images/combo1.jpg");
+}
+
+.label:hover{
+       -fx-background-color: transparent; 
+       
+}

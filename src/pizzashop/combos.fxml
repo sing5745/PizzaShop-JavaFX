@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="1388.0" prefWidth="1424.0" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="pizzashop.CombosController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="11.0" prefHeight="167.0" prefWidth="1371.0" style="-fx-background-color: white;">
+         <children>
+            <Label alignment="CENTER" layoutX="301.0" layoutY="16.0" prefHeight="135.0" prefWidth="859.0" style="-fx-text-fill: #cc0000; -fx-font-weight: bold; -fx-font-size: 45pt; -fx-font-style: italic; -fx-font-family: &quot;Agency FB&quot;; -fx-background-color: black;" text="COMBOS" />
+            <ImageView fitHeight="177.0" fitWidth="161.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/LogoSample_ByTailorBrands.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="63.0" layoutY="281.0">
+         <children>
+            <Pane layoutY="2.0" prefHeight="441.0" prefWidth="395.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/combo1.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="GAME TIME COMBO">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="351.0" prefHeight="45.0" prefWidth="371.0" style="-fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 14pt;" text="1 Medium 3 Regular Toppings and 2 Budweiser Brew for $18.49" />
+                  <Label alignment="CENTER" layoutX="114.0" layoutY="396.0" prefHeight="35.0" prefWidth="141.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="GET STARTED">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="498.0" layoutY="281.0">
+         <children>
+            <Pane layoutY="2.0" prefHeight="441.0" prefWidth="395.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/combo2.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="PIZZA AND WINGS">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="5.0" layoutY="351.0" prefHeight="45.0" prefWidth="386.0" style="-fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 14pt;" text="Large 3 Topping Pizza and 20 Wings $31.48" />
+                  <Label alignment="CENTER" layoutX="114.0" layoutY="396.0" prefHeight="35.0" prefWidth="141.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="GET STARTED">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="947.0" layoutY="282.0" prefHeight="441.0" prefWidth="395.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/combo3.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="PIZZA AND WINGS">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label alignment="CENTER" layoutX="5.0" layoutY="351.0" prefHeight="45.0" prefWidth="386.0" style="-fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 14pt;" text="Large 3 Topping Pizza and 1 Trio $27.99" />
+            <Label alignment="CENTER" layoutX="114.0" layoutY="396.0" prefHeight="35.0" prefWidth="141.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="GET STARTED">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="63.0" layoutY="779.0" prefHeight="441.0" prefWidth="395.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/combo4.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="POP CANS ADD-ON">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="351.0" prefHeight="45.0" prefWidth="371.0" style="-fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 14pt;" text="4-pack of pop cans $3.69" />
+            <Label alignment="CENTER" layoutX="114.0" layoutY="396.0" prefHeight="35.0" prefWidth="141.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="ADD">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="498.0" layoutY="779.0" prefHeight="441.0" prefWidth="395.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/combo5.jpeg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="46.0" layoutY="310.0" prefHeight="51.0" prefWidth="285.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="2 POP CANS + GARLIC BREAD ADD-ON">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="351.0" prefHeight="45.0" prefWidth="371.0" style="-fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 14pt;" text="2 Pop cans + Garlic Bread $3.99" />
+            <Label alignment="CENTER" layoutX="114.0" layoutY="396.0" prefHeight="35.0" prefWidth="141.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="ADD">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="947.0" layoutY="779.0" prefHeight="441.0" prefWidth="395.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/combo6.jpeg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="46.0" layoutY="310.0" prefHeight="51.0" prefWidth="285.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="2 POP CANS + 2 DIPS ADD-ON">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="351.0" prefHeight="45.0" prefWidth="371.0" style="-fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 14pt;" text="2 Pop cans + 2 Dips $2.99" />
+            <Label alignment="CENTER" layoutX="114.0" layoutY="396.0" prefHeight="35.0" prefWidth="141.0" style="-fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="ADD">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,17 @@
+
+.meatBox{
+           -fx-background-image: url("../images/meat.jpg");
+}
+
+.veggieBox{
+           -fx-background-image: url("../images/meat.jpg");
+}
+
+.CheckBox{
+      -fx-font-size:18pt;
+      -fx-text-fill:white;
+      -fx-font-family: "Agency FB";
+      -fx-background-color: black;
+      
+
+}

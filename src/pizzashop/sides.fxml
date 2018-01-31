@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="863.0" prefWidth="1435.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pizzashop.SidesController">
+   <content>
+      <AnchorPane prefHeight="763.0" prefWidth="1436.0">
+         <children>
+            <AnchorPane id="AnchorPane" layoutX="1.0" layoutY="5.0" prefHeight="1477.0" prefWidth="1435.0" style="-fx-background-color: black;">
+               <children>
+                  <AnchorPane layoutX="-1.0" layoutY="-4.0" prefHeight="170.0" prefWidth="1424.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="301.0" layoutY="16.0" prefHeight="135.0" prefWidth="859.0" style="-fx-text-fill: #cc0000; -fx-font-weight: bold; -fx-font-size: 45pt; -fx-font-style: italic; -fx-font-family: &quot;Agency FB&quot;; -fx-background-color: black;" text="SIDES" />
+                        <ImageView fx:id="LOGO" fitHeight="177.0" fitWidth="161.0" layoutY="3.0" onMouseClicked="#showMain" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/LogoSample_ByTailorBrands.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label fx:id="orderPrice" alignment="CENTER" layoutX="1270.0" layoutY="24.0" prefHeight="80.0" prefWidth="83.0" style="-fx-background-radius: 80px; -fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="0.00$" />
+                        <Button fx:id="checkout" layoutX="1255.0" layoutY="111.0" mnemonicParsing="false" onAction="#checkOut" prefHeight="46.0" prefWidth="130.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="CHECKOUT">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Pane layoutX="63.0" layoutY="281.0">
+                     <children>
+                        <Pane layoutY="2.0" prefHeight="413.0" prefWidth="395.0" style="-fx-background-color: white;">
+                           <children>
+                              <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/wings.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="10 WINGS ($9.75)">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <Button fx:id="add10Wings" layoutX="117.0" layoutY="360.0" mnemonicParsing="false" onAction="#addWings10" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD " />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="498.0" layoutY="281.0" />
+                  <Pane layoutX="515.0" layoutY="282.0" prefHeight="413.0" prefWidth="395.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/wings.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="20 WINGS ($18.99)">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Button fx:id="add20Wings" layoutX="117.0" layoutY="360.0" mnemonicParsing="false" onAction="#addWings20" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD " />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="968.0" layoutY="282.0" prefHeight="413.0" prefWidth="395.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/wings.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="30 WINGS ($28.59)">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Button fx:id="add30Wings" layoutX="130.0" layoutY="360.0" mnemonicParsing="false" onAction="#addWings30" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD " />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="514.0" layoutY="754.0" prefHeight="413.0" prefWidth="395.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/gcBread.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="212.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="CHEESE GARLIC BREAD ($3.99)">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Button fx:id="addCheeseGarlicB" layoutX="130.0" layoutY="360.0" mnemonicParsing="false" onAction="#addCGB" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD " />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="976.0" layoutY="754.0" prefHeight="413.0" prefWidth="395.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/wedges.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="WEDGES ($3.99)">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Button fx:id="addWedges" layoutX="117.0" layoutY="360.0" mnemonicParsing="false" onAction="#addWedges" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD " />
+                     </children>
+                  </Pane>
+                  <Label fx:id="sPrice" alignment="CENTER" layoutX="1274.0" layoutY="178.0" prefHeight="80.0" prefWidth="83.0" style="-fx-background-radius: 80px; -fx-text-fill: white; -fx-background-color: grey; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="0.00$" />
+                  <Pane layoutX="76.0" layoutY="754.0" prefHeight="413.0" prefWidth="395.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/gBread.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="117.0" layoutY="309.0" prefHeight="51.0" prefWidth="160.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="GARLIC BREAD ($2.99)">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Button fx:id="addGarlicBread" layoutX="129.0" layoutY="360.0" mnemonicParsing="false" onAction="#addGB" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD " />
+                     </children>
+                  </Pane>
+                  <Button fx:id="print" layoutX="1098.0" layoutY="199.0" mnemonicParsing="false" onAction="#print" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: grey; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD TO ORDER" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

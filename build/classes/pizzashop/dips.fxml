@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="941.0" prefWidth="1431.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pizzashop.DipsController">
+   <content>
+      <AnchorPane prefHeight="1482.0" prefWidth="1385.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="1388.0" prefWidth="1431.0" style="-fx-background-color: black;">
+               <children>
+                  <AnchorPane layoutX="-2.0" layoutY="-4.0" prefHeight="171.0" prefWidth="1415.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="301.0" layoutY="16.0" prefHeight="135.0" prefWidth="859.0" style="-fx-text-fill: #cc0000; -fx-font-weight: bold; -fx-font-size: 45pt; -fx-font-style: italic; -fx-font-family: &quot;Agency FB&quot;; -fx-background-color: black;" text="DIPS &amp; DRINKS" />
+                        <ImageView fx:id="LOGO" fitHeight="177.0" fitWidth="161.0" layoutY="3.0" onMouseClicked="#showMain" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/LogoSample_ByTailorBrands.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="checkout" layoutX="1235.0" layoutY="111.0" mnemonicParsing="false" onAction="#checkOut" prefHeight="46.0" prefWidth="130.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="CHECKOUT">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label fx:id="orderL" alignment="CENTER" layoutX="1259.0" layoutY="16.0" prefHeight="80.0" prefWidth="83.0" style="-fx-background-radius: 80px; -fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="0.00$" />
+                     </children>
+                  </AnchorPane>
+                  <Pane layoutX="63.0" layoutY="281.0">
+                     <children>
+                        <Pane layoutY="2.0" prefHeight="413.0" prefWidth="395.0" style="-fx-background-color: white;">
+                           <children>
+                              <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/garlic.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="93.0" layoutY="308.0" prefHeight="51.0" prefWidth="190.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="GARLIC PARMESAN ($0.75)">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <AnchorPane layoutX="254.0" layoutY="362.0" prefHeight="31.0" prefWidth="127.0">
+                                 <children>
+                                    <Button fx:id="decB" mnemonicParsing="false" onAction="#decrease" prefHeight="31.0" prefWidth="31.0" text="-" />
+                                    <Button fx:id="incB" layoutX="99.0" layoutY="-1.0" mnemonicParsing="false" onAction="#increase" prefHeight="31.0" prefWidth="34.0" text="+" />
+                                    <TextField fx:id="show" alignment="CENTER" layoutX="46.0" prefHeight="31.0" prefWidth="41.0" text="0" />
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="garlic" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="359.0" mnemonicParsing="false" onAction="#addGarlic" prefHeight="38.0" prefWidth="171.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD ">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="498.0" layoutY="281.0" />
+                  <Pane layoutX="515.0" layoutY="282.0" prefHeight="413.0" prefWidth="395.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/hot.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="RANCH  ($0.75)">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <AnchorPane layoutX="248.0" layoutY="362.0" prefHeight="31.0" prefWidth="127.0">
+                           <children>
+                              <Button fx:id="decB1" mnemonicParsing="false" onAction="#decreaseRanch" prefHeight="31.0" prefWidth="31.0" text="-" />
+                              <Button fx:id="incB1" layoutX="99.0" layoutY="-1.0" mnemonicParsing="false" onAction="#increaseRanch" prefHeight="31.0" prefWidth="34.0" text="+" />
+                              <TextField fx:id="show1" alignment="CENTER" layoutX="46.0" prefHeight="31.0" prefWidth="41.0" text="0" />
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="ranch" alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="359.0" mnemonicParsing="false" onAction="#addRanch" prefHeight="38.0" prefWidth="171.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="968.0" layoutY="282.0" prefHeight="413.0" prefWidth="395.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/bbq.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="BARBEQUE ($0.75)">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Button fx:id="addBbq" alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="360.0" mnemonicParsing="false" onAction="#addBbq" prefHeight="38.0" prefWidth="171.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD ">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <AnchorPane layoutX="227.0" layoutY="364.0" prefHeight="31.0" prefWidth="127.0">
+                           <children>
+                              <Button fx:id="decBbq" mnemonicParsing="false" onAction="#decreaseBbq" prefHeight="31.0" prefWidth="31.0" text="-" />
+                              <Button fx:id="incBbq" layoutX="99.0" layoutY="-1.0" mnemonicParsing="false" onAction="#increaseBbq" prefHeight="31.0" prefWidth="34.0" text="+" />
+                              <TextField fx:id="showBbq" alignment="CENTER" layoutX="46.0" prefHeight="31.0" prefWidth="41.0" text="0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+                  <Label fx:id="showPrice" alignment="CENTER" layoutX="1263.0" layoutY="183.0" prefHeight="80.0" prefWidth="83.0" style="-fx-background-radius: 80px; -fx-text-fill: white; -fx-background-color: grey; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="0.00$" />
+                  <Pane layoutX="63.0" layoutY="760.0" prefHeight="413.0" prefWidth="395.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/coke.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="COKE ($1.20)">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Button fx:id="cola" alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="362.0" mnemonicParsing="false" onAction="#addCola" prefHeight="38.0" prefWidth="171.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD ">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <AnchorPane layoutX="227.0" layoutY="366.0" prefHeight="31.0" prefWidth="127.0">
+                           <children>
+                              <Button fx:id="decCola" mnemonicParsing="false" onAction="#decreaseCola" prefHeight="31.0" prefWidth="31.0" text="-" />
+                              <Button fx:id="incCola" layoutX="99.0" layoutY="-1.0" mnemonicParsing="false" onAction="#increaseCola" prefHeight="31.0" prefWidth="34.0" text="+" />
+                              <TextField fx:id="showCola" alignment="CENTER" layoutX="46.0" prefHeight="31.0" prefWidth="41.0" text="0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="518.0" layoutY="760.0" prefHeight="413.0" prefWidth="395.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fanta.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="FANTA ($1.20)">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Button fx:id="addFanta" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0" layoutY="360.0" mnemonicParsing="false" onAction="#addFanta" prefHeight="38.0" prefWidth="171.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD ">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <AnchorPane layoutX="232.0" layoutY="364.0" prefHeight="31.0" prefWidth="127.0">
+                           <children>
+                              <Button fx:id="decFanta" mnemonicParsing="false" onAction="#decreaseFanta" prefHeight="31.0" prefWidth="31.0" text="-" />
+                              <Button fx:id="incFanta" layoutX="99.0" layoutY="-1.0" mnemonicParsing="false" onAction="#increaseFanta" prefHeight="31.0" prefWidth="34.0" text="+" />
+                              <TextField fx:id="showFanta" alignment="CENTER" layoutX="46.0" prefHeight="31.0" prefWidth="41.0" text="0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="977.0" layoutY="760.0" prefHeight="413.0" prefWidth="395.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/ginger.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="GINGER ALE ($1.20)">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Button fx:id="gingerAle" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="360.0" mnemonicParsing="false" onAction="#addGingerAle" prefHeight="38.0" prefWidth="171.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD ">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <AnchorPane layoutX="234.0" layoutY="364.0" prefHeight="31.0" prefWidth="127.0">
+                           <children>
+                              <Button fx:id="decAle" mnemonicParsing="false" onAction="#decreaseAle" prefHeight="31.0" prefWidth="31.0" text="-" />
+                              <Button fx:id="incAle" layoutX="99.0" layoutY="-1.0" mnemonicParsing="false" onAction="#increaseGinger" prefHeight="31.0" prefWidth="34.0" text="+" />
+                              <TextField fx:id="showAle" alignment="CENTER" layoutX="46.0" prefHeight="31.0" prefWidth="41.0" text="0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+                  <Button fx:id="write" alignment="CENTER" contentDisplay="CENTER" layoutX="1053.0" layoutY="204.0" mnemonicParsing="false" onAction="#write" prefHeight="38.0" prefWidth="171.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: grey; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD TO ORDER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="991.0" prefWidth="1448.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pizzashop.CombosController">
+   <content>
+      <AnchorPane prefHeight="1439.0" prefWidth="1447.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="1388.0" prefWidth="1424.0" style="-fx-background-color: black;">
+               <children>
+                  <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="165.0" prefWidth="1423.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="301.0" layoutY="16.0" prefHeight="135.0" prefWidth="859.0" style="-fx-text-fill: #cc0000; -fx-font-weight: bold; -fx-font-size: 45pt; -fx-font-style: italic; -fx-font-family: &quot;Agency FB&quot;; -fx-background-color: black;" text="COMBOS" />
+                        <ImageView fx:id="LOGO" fitHeight="177.0" fitWidth="161.0" layoutY="3.0" onMouseClicked="#showMain" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/LogoSample_ByTailorBrands.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label fx:id="orderL" alignment="CENTER" layoutX="1251.0" layoutY="24.0" prefHeight="80.0" prefWidth="83.0" style="-fx-background-radius: 80px; -fx-text-fill: white; -fx-background-color: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="0.00$" />
+                     </children>
+                  </AnchorPane>
+                  <Pane layoutX="63.0" layoutY="281.0">
+                     <children>
+                        <Pane layoutY="2.0" prefHeight="441.0" prefWidth="395.0" style="-fx-background-color: white;">
+                           <children>
+                              <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/combo1.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="GAME TIME COMBO">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <Label layoutX="11.0" layoutY="344.0" prefHeight="45.0" prefWidth="371.0" style="-fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 14pt;" text="1 Medium 3 Regular Toppings and 2 Budweiser Brew for $18.49" />
+                              <ToolBar layoutX="97.0" layoutY="389.0" prefHeight="45.0" prefWidth="177.0" style="-fx-background-color: transparent;">
+                                <items>
+                                  <Button fx:id="getStartedC1" mnemonicParsing="false" onAction="#addComboToList" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="GET STARTED" />
+                                    <CheckBox fx:id="t4" mnemonicParsing="false" onAction="#top5" text="Chicken" />
+                                    <CheckBox fx:id="t0" mnemonicParsing="false" onAction="#top" text="Pepperoni" />
+                                    <CheckBox fx:id="t1" mnemonicParsing="false" onAction="#top2" text="Onion" />
+                                    <CheckBox fx:id="t2" mnemonicParsing="false" onAction="#top3" text="Green Peppers" />
+                                    <CheckBox fx:id="t3" mnemonicParsing="false" onAction="#top4" text="Mushroom" />
+                                </items>
+                              </ToolBar>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="498.0" layoutY="281.0">
+                     <children>
+                        <Pane layoutY="2.0" prefHeight="441.0" prefWidth="395.0" style="-fx-background-color: white;">
+                           <children>
+                              <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/combo2.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="PIZZA AND WINGS">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="5.0" layoutY="351.0" prefHeight="45.0" prefWidth="386.0" style="-fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 14pt;" text="Large 3 Topping Pizza and 20 Wings $31.48" />
+                              <ToolBar layoutX="108.0" layoutY="390.0" prefHeight="45.0" prefWidth="177.0" style="-fx-background-color: transparent;">
+                                 <items>
+                                    <Button fx:id="getStartedC2" mnemonicParsing="false" onAction="#addCombo2ToList" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="GET STARTED" />
+                                    <CheckBox fx:id="t9" mnemonicParsing="false" onAction="#top10" text="Chicken" />
+                                    <CheckBox fx:id="t5" mnemonicParsing="false" onAction="#top6" text="Pepperoni" />
+                                    <CheckBox fx:id="t6" mnemonicParsing="false" onAction="#top7" text="Onion" />
+                                    <CheckBox fx:id="t7" mnemonicParsing="false" onAction="#top8" text="Green Peppers" />
+                                    <CheckBox fx:id="t8" mnemonicParsing="false" onAction="#top9" text="Mushroom" />
+                                 </items>
+                              </ToolBar>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="947.0" layoutY="282.0" prefHeight="441.0" prefWidth="395.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/combo3.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="PIZZA AND TRIO">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="5.0" layoutY="351.0" prefHeight="45.0" prefWidth="386.0" style="-fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 14pt;" text="Large 3 Topping Pizza and 1 Trio $27.99" />
+                        <ToolBar layoutX="108.0" layoutY="388.0" prefHeight="45.0" prefWidth="177.0" style="-fx-background-color: transparent;">
+                           <items>
+                              <Button fx:id="getStartedC3" mnemonicParsing="false" onAction="#addCombo3ToList" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="GET STARTED" />
+                              <CheckBox fx:id="t14" mnemonicParsing="false" onAction="#top15" text="Chicken" />
+                              <CheckBox fx:id="t10" mnemonicParsing="false" onAction="#top11" text="Pepperoni" />
+                              <CheckBox fx:id="t11" mnemonicParsing="false" onAction="#top11" text="Onion" />
+                              <CheckBox fx:id="t12" mnemonicParsing="false" onAction="#top13" text="Green Peppers" />
+                              <CheckBox fx:id="t13" mnemonicParsing="false" onAction="#top14" text="Mushroom" />
+                           </items>
+                        </ToolBar>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="63.0" layoutY="764.0" prefHeight="441.0" prefWidth="395.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/combo4.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="114.0" layoutY="309.0" prefHeight="51.0" prefWidth="141.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="POP CANS ADD-ON">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="11.0" layoutY="351.0" prefHeight="45.0" prefWidth="371.0" style="-fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 14pt;" text="4-pack of pop cans $3.69" />
+                        <Button fx:id="addCans" layoutX="129.0" layoutY="389.0" mnemonicParsing="false" onAction="#addCombo4ToList" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="965.0" layoutY="779.0" prefHeight="441.0" prefWidth="395.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/combo6.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="46.0" layoutY="310.0" prefHeight="51.0" prefWidth="285.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="2 POP CANS + 2 DIPS ADD-ON">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="11.0" layoutY="351.0" prefHeight="45.0" prefWidth="371.0" style="-fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 14pt;" text="2 Pop cans + 2 Dips $2.99" />
+                        <Button fx:id="addCanDips" layoutX="121.0" layoutY="389.0" mnemonicParsing="false" onAction="#addCombo6ToList" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="515.0" layoutY="773.0" prefHeight="441.0" prefWidth="395.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="304.0" fitWidth="409.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/combo5.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="46.0" layoutY="310.0" prefHeight="51.0" prefWidth="285.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" stylesheets="@../css/main.css" text="2 POP CANS + GARLIC BREAD ADD-ON">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="11.0" layoutY="351.0" prefHeight="45.0" prefWidth="371.0" style="-fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 14pt;" text="2 Pop cans + Garlic Bread $3.99" />
+                        <Button fx:id="addBreadCan" layoutX="121.0" layoutY="396.0" mnemonicParsing="false" onAction="#addCombo5ToList" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD" />
+                     </children>
+                  </Pane>
+                  <Button fx:id="print" layoutX="1095.0" layoutY="203.0" mnemonicParsing="false" onAction="#print" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: grey; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="ADD TO ORDER" />
+                  <Label fx:id="comboL" alignment="CENTER" layoutX="1259.0" layoutY="182.0" prefHeight="80.0" prefWidth="83.0" style="-fx-background-radius: 80px; -fx-text-fill: white; -fx-background-color: grey; -fx-font-weight: bold; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="0.00$" />
+                  <Button fx:id="checkout" layoutX="1233.0" layoutY="115.0" mnemonicParsing="false" onAction="#checkOut" prefHeight="46.0" prefWidth="130.0" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: black; -fx-font-family: &quot;Agency FB&quot;; -fx-font-size: 15pt;" text="CHECKOUT">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
