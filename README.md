@@ -9,5 +9,5 @@ Combos Window
 Make Own Window
 ![make own](https://github.com/sing5745/PizzaShop-JavaFX/raw/master/Make_Own.PNG)
 
-Todays Special
-![todays special](https://github.com/sing5745/PizzaShop-JavaFX/raw/master/Todays Special.png)
+Todays Special Window
+![todays special](https://github.com/sing5745/PizzaShop-JavaFX/raw/master/Todays_Special.png)
